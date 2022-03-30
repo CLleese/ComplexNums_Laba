@@ -2,13 +2,13 @@ class Complex
 {
 public:
   Complex();
-  Complex(int Im, int Re);
+  Complex(int Re, int Im);
   Complex(const Complex &other);
 
   int GetIm();
-  //void SetIm(Im);
+  void SetIm(int Im);
   int GetRe();
-  //void SetRe(Re);
+  void SetRe(int Re);
 
   Complex operator+(Complex a);
 

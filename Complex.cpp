@@ -5,7 +5,7 @@ Complex::Complex(){
   Im = 0;
 }
 
-Complex::Complex(int Im, int Re)
+Complex::Complex(int Re, int Im)
 {
   this->Im = Im;
   this->Re = Re;
@@ -27,21 +27,17 @@ int Complex::GetIm()
   return Im;
 }
 
-//void Complex::SetIm(int Im)
-//{
-//  this->Im = Im;
-//}
-
-//void Complex::SetRe(int Re)
-//{
-//this->Re = Re;
-//}
-
-Complex::operator+(Complex a)
+void Complex::SetIm(int Im)
 {
-  Complex c;
-  c.Re = this.Re + a.Re;
-  c.Im = this.Im + a.Im;
+  this->Im = Im;
+}
 
-  return c;
+void Complex::SetRe(int Re)
+{
+  this->Re = Re;
+}
+
+Complex Complex::operator+(Complex a)
+{
+  return Complex(this->Re + a.Re, this->Im + a.Im);
 }
