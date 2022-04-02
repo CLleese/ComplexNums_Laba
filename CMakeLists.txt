@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 2.8)
  # Объявить проект cmake
 project(complex)
-set(CMAKE_BUILD_TYPE "Release")  # Возможные варианты:"Release" "Debug"
+set(CMAKE_BUILD_TYPE "Debug")  # Возможные варианты:"Release" "Debug"
  # Добавить общую библиотеку статическая библиотека не имеет SHARED
 add_library(Complex SHARED Complex.cpp)  
  # Сгенерировать исполняемый файл в демонстрационном формате:add_executable(Исходный файл названия программы)

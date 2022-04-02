@@ -4,13 +4,13 @@ class Complex
 {
 public:
   Complex();
-  Complex(int Re, int Im);
+  Complex(double Re, double Im);
   Complex(const Complex &other);
 
-  int GetIm();
-  void SetIm(int Im);
-  int GetRe();
-  void SetRe(int Re);
+  double GetIm();
+  void SetIm(double Im);
+  double GetRe();
+  void SetRe(double Re);
 
   Complex operator+(Complex a);
   Complex operator-(Complex a);
@@ -25,9 +25,15 @@ public:
   friend std::istream& operator>>(std::istream &in, Complex &a);
 
   //методы доп. заданий
+  
+  double CalculateModule();
+  Complex IntPow(int m);
+  Complex DrobPow(int m, int n);
+  void PrintTrigForm();
+
 
 protected:
-  int Im;
-  int Re;
+  double Im;
+  double Re;
 };
 
